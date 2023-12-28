@@ -1,0 +1,8 @@
+streamlit
+matplotlib.pyplot
+boto3
+pandas
+io
+datetime 
+matplotlib.ticker
+numpy
