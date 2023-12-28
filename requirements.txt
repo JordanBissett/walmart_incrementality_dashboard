@@ -1,8 +1,7 @@
 streamlit
-matplotlib.pyplot
+matplotlib
 boto3
 pandas
 io
 datetime 
-matplotlib.ticker
 numpy
