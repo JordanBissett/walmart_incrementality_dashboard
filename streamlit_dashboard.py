@@ -276,8 +276,8 @@ def plot_stacked_bar_chart(df, num_ticks):
     return fig
         
 
-start_date_str = '2023-11-03'
-end_date_str = '2023-11-22'
+start_date_str = '2023-10-01'
+end_date_str = '2023-10-31'
 
 # Convert the string dates to datetime objects
 default_start = datetime.strptime(start_date_str, '%Y-%m-%d')
