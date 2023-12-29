@@ -317,7 +317,7 @@ brand_filter = st.sidebar.multiselect('Brands', options = brands)
 kw_filter = st.sidebar.multiselect('Keywords', options = kws)
 sku_filter = st.sidebar.multiselect('SKUs', options = skus)
 
-num_ticks = st.sidebar.number_input('Graph Lookback Window:', min_value=1, max_value=20, value=5)
+num_ticks = st.sidebar.slider('Graph Lookback Window:', min_value=1, max_value=31, value=5, step=1 )
 
 # Validation
 if start_date > end_date:
