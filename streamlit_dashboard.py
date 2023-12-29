@@ -32,6 +32,9 @@ def get_data_from_s3(business_unit, start_date, end_date, agg_level, brand_filte
         
         keys.append(key)
 
+        if current >= end:
+            break
+
         # Move to the next month
         # Check for year end and increment year if necessary
         if current.month == 12:
