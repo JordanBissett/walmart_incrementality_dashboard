@@ -303,9 +303,10 @@ response = s3.get_object(Bucket=bucket, Key=key)
 skus = pd.read_csv(response['Body'])['sku'].tolist()
 
 
-
-start_date = st.sidebar.date_input("Start date", default_start)
-end_date = st.sidebar.date_input("End date", default_end)
+min_date = datetime(2023,9,1)
+max_date = datetime(2023,11,30)
+start_date = st.sidebar.date_input("Start date", default_start,min_value=min_date, max_value=max_date)
+end_date = st.sidebar.date_input("End date", default_end,min_value=min_date, max_value=max_date)
 
 agg_level = st.sidebar.selectbox('Interval', options=['Daily', 'Weekly', 'Monthly'] )
 
