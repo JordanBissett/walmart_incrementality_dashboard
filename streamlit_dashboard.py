@@ -273,6 +273,8 @@ def plot_stacked_bar_chart(df, num_ticks):
     ax_right.set_ylabel('% Incrementality', color='white')
     ax_right.tick_params(axis='y', labelcolor='white')
 
+    ax.set_xticklabels(x_values, rotation='vertical', color='white')
+
     return fig
         
 
