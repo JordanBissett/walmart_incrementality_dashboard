@@ -191,7 +191,7 @@ def plot_stacked_bar_chart(df, num_ticks):
         grouped_df['incremental_roas'] = np.where(grouped_df['spend'] != 0, grouped_df['incremental_sales'] / grouped_df['spend'], None)
         grouped_df = grouped_df.sort_values(by='Month', ascending=False).head(num_ticks).iloc[::-1]
         x_label = 'Month (MM-YYYY)'
-        x_values = grouped_df['Month'].tolist()
+        x_values = grouped_df['Month'].dt.strftime('%m-%d').tolist()
         grouped_df['Month'] = grouped_df['Month'].dt.strftime('%m-%Y')
 
     # Apply dark theme
